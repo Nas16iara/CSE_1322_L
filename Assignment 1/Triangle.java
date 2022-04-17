@@ -6,10 +6,10 @@ public class Triangle {
     private double side2;
     private double side3;
     //Constructors:
-    Triangle(double side1,double side2,double side3){
-        this.side1=side1;
-        this.side2=side2;
-        this.side3=side3;
+    Triangle(double side1Trig,double side2Trig,double side3Trig){
+        side1=side1Trig;
+        side2=side2Trig;
+        side3=side3Trig;
     }
     Triangle(){
         side1=3;
@@ -18,12 +18,13 @@ public class Triangle {
     }
     //Methods:
     double perimeter(){
-        return (side1+side2+side3);
+        double perimeterTrig=(side1+side2+side3);
+        return perimeterTrig;
     }
     double area(){
-        double p;
-        p=perimeter()/2;
-        return (Math.sqrt(p*(p-side1)*(p-side2)*(p-side3)));
+        double p=perimeter()/2;
+        double areaTrig=(Math.sqrt(p*(p-side1)*(p-side2)*(p-side3)));
+        return areaTrig;
     }
     double height(){
         double smallest;
@@ -36,7 +37,8 @@ public class Triangle {
         else{
             smallest=side3;
         }
-        return (area()*2)/smallest;
+        double heigthTrig=(area()*2)/smallest;
+        return heightTrig;
     }
     public String toString() {
         return "Triangle has" + "sides " + side1 + "," + side2 + " and " + side3 + "."+
